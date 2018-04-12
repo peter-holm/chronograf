@@ -18,12 +18,17 @@ class UsersPage extends PureComponent {
   }
 
   handleCreateUser = user => {
-    const {links, actions: {createUserAsync}} = this.props
+    const {
+      links,
+      actions: {createUserAsync},
+    } = this.props
     createUserAsync(links.users, user)
   }
 
   handleUpdateUserRole = (user, currentRole, {name}) => {
-    const {actions: {updateUserAsync}} = this.props
+    const {
+      actions: {updateUserAsync},
+    } = this.props
     const updatedRole = {...currentRole, name}
     const newRoles = user.roles.map(
       r => (r.organization === currentRole.organization ? updatedRole : r)
@@ -36,7 +41,9 @@ class UsersPage extends PureComponent {
   }
 
   handleDeleteUser = user => {
-    const {actions: {deleteUserAsync}} = this.props
+    const {
+      actions: {deleteUserAsync},
+    } = this.props
     deleteUserAsync(user, {isAbsoluteDelete: false})
   }
 

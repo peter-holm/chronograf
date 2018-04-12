@@ -155,7 +155,12 @@ class HostsPage extends Component {
 const {func, shape, string, number} = PropTypes
 
 const mapStateToProps = state => {
-  const {app: {persisted: {autoRefresh}}, links} = state
+  const {
+    app: {
+      persisted: {autoRefresh},
+    },
+    links,
+  } = state
   return {
     links,
     autoRefresh,

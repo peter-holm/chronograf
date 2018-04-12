@@ -62,7 +62,11 @@ VisualizationName.propTypes = {
   handleRenameCell: func,
 }
 
-const mapStateToProps = ({cellEditorOverlay: {cell: {name}}}) => ({
+const mapStateToProps = ({
+  cellEditorOverlay: {
+    cell: {name},
+  },
+}) => ({
   name,
 })
 

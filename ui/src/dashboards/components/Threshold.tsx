@@ -82,7 +82,9 @@ class Threshold extends PureComponent<Props, State> {
   }
 
   private get selectedColor(): SelectedColor {
-    const {threshold: {hex, name}} = this.props
+    const {
+      threshold: {hex, name},
+    } = this.props
     return {hex, name}
   }
 

@@ -39,7 +39,11 @@ class AxesOptions extends Component {
 
   handleSetYAxisBoundMin = min => {
     const {handleUpdateAxes, axes} = this.props
-    const {y: {bounds: [, max]}} = this.props.axes
+    const {
+      y: {
+        bounds: [, max],
+      },
+    } = this.props.axes
     const newAxes = {...axes, y: {...axes.y, bounds: [min, max]}}
 
     handleUpdateAxes(newAxes)
@@ -47,7 +51,11 @@ class AxesOptions extends Component {
 
   handleSetYAxisBoundMax = max => {
     const {handleUpdateAxes, axes} = this.props
-    const {y: {bounds: [min]}} = axes
+    const {
+      y: {
+        bounds: [min],
+      },
+    } = axes
     const newAxes = {...axes, y: {...axes.y, bounds: [min, max]}}
 
     handleUpdateAxes(newAxes)
@@ -76,7 +84,9 @@ class AxesOptions extends Component {
 
   render() {
     const {
-      axes: {y: {bounds, label, prefix, suffix, base, scale, defaultYLabel}},
+      axes: {
+        y: {bounds, label, prefix, suffix, base, scale, defaultYLabel},
+      },
       type,
       staticLegend,
       onToggleStaticLegend,
@@ -216,7 +226,11 @@ AxesOptions.propTypes = {
   handleUpdateAxes: func.isRequired,
 }
 
-const mapStateToProps = ({cellEditorOverlay: {cell: {axes, type}}}) => ({
+const mapStateToProps = ({
+  cellEditorOverlay: {
+    cell: {axes, type},
+  },
+}) => ({
   axes,
   type,
 })

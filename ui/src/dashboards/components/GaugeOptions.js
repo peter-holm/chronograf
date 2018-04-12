@@ -154,7 +154,12 @@ class GaugeOptions extends Component {
   }
 
   render() {
-    const {gaugeColors, axes: {y: {prefix, suffix}}} = this.props
+    const {
+      gaugeColors,
+      axes: {
+        y: {prefix, suffix},
+      },
+    } = this.props
 
     const disableMaxColor = gaugeColors.length > MIN_THRESHOLDS
     const disableAddThreshold = gaugeColors.length > MAX_THRESHOLDS
@@ -227,7 +232,12 @@ GaugeOptions.propTypes = {
   onResetFocus: func.isRequired,
 }
 
-const mapStateToProps = ({cellEditorOverlay: {gaugeColors, cell: {axes}}}) => ({
+const mapStateToProps = ({
+  cellEditorOverlay: {
+    gaugeColors,
+    cell: {axes},
+  },
+}) => ({
   gaugeColors,
   axes,
 })

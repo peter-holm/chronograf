@@ -72,7 +72,9 @@ class AlertsTable extends Component {
   }
 
   renderTable() {
-    const {source: {id}} = this.props
+    const {
+      source: {id},
+    } = this.props
     const alerts = this.sort(
       this.state.filteredAlerts,
       this.state.sortKey,
@@ -173,7 +175,10 @@ class AlertsTable extends Component {
   }
 
   renderTableEmpty() {
-    const {source: {id}, shouldNotBeFilterable} = this.props
+    const {
+      source: {id},
+      shouldNotBeFilterable,
+    } = this.props
 
     return shouldNotBeFilterable ? (
       <div className="graph-empty">

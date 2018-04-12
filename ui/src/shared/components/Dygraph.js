@@ -113,7 +113,12 @@ class Dygraph extends Component {
   }
 
   componentDidUpdate() {
-    const {labels, axes: {y, y2}, options, isBarGraph} = this.props
+    const {
+      labels,
+      axes: {y, y2},
+      options,
+      isBarGraph,
+    } = this.props
 
     const dygraph = this.dygraph
 
@@ -157,7 +162,11 @@ class Dygraph extends Component {
   }
 
   getYRange = timeSeries => {
-    const {options, axes: {y}, ruleValues} = this.props
+    const {
+      options,
+      axes: {y},
+      ruleValues,
+    } = this.props
 
     if (options.stackedGraph) {
       return getStackedRange(y.bounds)
@@ -222,7 +231,9 @@ class Dygraph extends Component {
   }
 
   get labelWidth() {
-    const {axes: {y}} = this.props
+    const {
+      axes: {y},
+    } = this.props
     return (
       LABEL_WIDTH +
       y.prefix.length * CHAR_PIXELS +

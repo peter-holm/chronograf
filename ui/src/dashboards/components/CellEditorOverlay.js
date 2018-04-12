@@ -31,7 +31,10 @@ class CellEditorOverlay extends Component {
   constructor(props) {
     super(props)
 
-    const {cell: {queries, legend}, sources} = props
+    const {
+      cell: {queries, legend},
+      sources,
+    } = props
 
     let source = _.get(queries, ['0', 'source'], null)
     source = sources.find(s => s.links.self === source) || props.source

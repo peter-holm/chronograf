@@ -46,7 +46,9 @@ class QueryEditor extends Component {
   }
 
   render() {
-    const {config: {status}} = this.props
+    const {
+      config: {status},
+    } = this.props
     const {value} = this.state
 
     return (

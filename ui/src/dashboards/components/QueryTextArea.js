@@ -185,7 +185,9 @@ class QueryTextArea extends Component {
   }
 
   render() {
-    const {config: {status}} = this.props
+    const {
+      config: {status},
+    } = this.props
     const {
       value,
       isTemplating,

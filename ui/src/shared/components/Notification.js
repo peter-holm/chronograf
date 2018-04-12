@@ -21,7 +21,9 @@ class Notification extends Component {
   }
 
   componentDidMount() {
-    const {notification: {duration}} = this.props
+    const {
+      notification: {duration},
+    } = this.props
 
     // Trigger animation in
     const {height} = this.notificationRef.getBoundingClientRect()
@@ -39,7 +41,10 @@ class Notification extends Component {
   }
 
   handleDismiss = () => {
-    const {notification: {id}, dismissNotification} = this.props
+    const {
+      notification: {id},
+      dismissNotification,
+    } = this.props
 
     this.setState({dismissed: true})
     this.deleteTimer = setTimeout(
@@ -49,7 +54,9 @@ class Notification extends Component {
   }
 
   render() {
-    const {notification: {type, message, icon}} = this.props
+    const {
+      notification: {type, message, icon},
+    } = this.props
     const {height, dismissed} = this.state
 
     const notificationContainerClass = classnames('notification-container', {

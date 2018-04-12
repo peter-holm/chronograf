@@ -18,13 +18,19 @@ class DashboardsPage extends Component {
   }
 
   handleCreateDashbord = async () => {
-    const {source: {id}, router: {push}} = this.props
+    const {
+      source: {id},
+      router: {push},
+    } = this.props
     const {data} = await createDashboard(NEW_DASHBOARD)
     push(`/sources/${id}/dashboards/${data.id}`)
   }
 
   handleCloneDashboard = dashboard => async () => {
-    const {source: {id}, router: {push}} = this.props
+    const {
+      source: {id},
+      router: {push},
+    } = this.props
     const {data} = await createDashboard({
       ...dashboard,
       name: `${dashboard.name} (clone)`,

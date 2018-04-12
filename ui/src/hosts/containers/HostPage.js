@@ -36,7 +36,9 @@ class HostPage extends Component {
     const {source, params, location} = this.props
 
     // fetching layouts and mappings can be done at the same time
-    const {data: {layouts}} = await getLayouts()
+    const {
+      data: {layouts},
+    } = await getLayouts()
     const hosts = await getAllHosts(source.links.proxy, source.telegraf)
     const newHosts = await getAppsForHosts(
       source.links.proxy,
@@ -213,7 +215,10 @@ HostPage.propTypes = {
 }
 
 const mapStateToProps = ({
-  app: {ephemeral: {inPresentationMode}, persisted: {autoRefresh}},
+  app: {
+    ephemeral: {inPresentationMode},
+    persisted: {autoRefresh},
+  },
 }) => ({
   inPresentationMode,
   autoRefresh,

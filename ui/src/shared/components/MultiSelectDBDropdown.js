@@ -35,7 +35,11 @@ class MultiSelectDBDropdown extends Component {
   }
 
   _getDbRps = async () => {
-    const {source: {links: {proxy}}} = this.context
+    const {
+      source: {
+        links: {proxy},
+      },
+    } = this.context
     const {onErrorThrown} = this.props
 
     try {

@@ -28,7 +28,11 @@ class CustomTimeRangeDropdown extends Component {
   }
 
   render() {
-    const {timeRange: {upper, lower}, timeRange, onApplyTimeRange} = this.props
+    const {
+      timeRange: {upper, lower},
+      timeRange,
+      onApplyTimeRange,
+    } = this.props
 
     const {expanded} = this.state
 
