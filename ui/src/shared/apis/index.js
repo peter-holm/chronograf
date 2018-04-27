@@ -222,7 +222,7 @@ export function kapacitorProxy(kapacitor, method, path, body) {
   })
 }
 
-export const getQueryConfig = (url, queries, tempVars) =>
+export const getQueryConfigAndStatus = (url, queries, tempVars) =>
   AJAX({
     url,
     method: 'POST',

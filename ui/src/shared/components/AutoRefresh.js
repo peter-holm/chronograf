@@ -4,7 +4,7 @@ import _ from 'lodash'
 
 import {fetchTimeSeriesAsync} from 'shared/actions/timeSeries'
 import {removeUnselectedTemplateValues} from 'src/dashboards/constants'
-import {intervalValuesPoints} from 'src/shared/constants'
+import {intervalValuesPoints, TEMP_VAR_INTERVAL} from 'src/shared/constants'
 
 const AutoRefresh = ComposedComponent => {
   class wrapper extends Component {
@@ -104,7 +104,7 @@ const AutoRefresh = ComposedComponent => {
         const db = _.get(query, 'db', database)
 
         const templatesWithIntervalVals = templates.map(temp => {
-          if (temp.tempVar === ':interval:') {
+          if (temp.tempVar === TEMP_VAR_INTERVAL) {
             if (resolution) {
               // resize event
               return {
