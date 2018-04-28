@@ -1,5 +1,6 @@
 import {DEFAULT_TABLE_OPTIONS} from 'src/shared/constants/tableGraph'
 import {CELL_TYPE_LINE} from 'src/dashboards/graphics/graph'
+import {TEMP_VAR_DASHBOARD_TIME} from 'src/shared/constants'
 
 export const UNTITLED_CELL_LINE = 'Untitled Line Graph'
 export const UNTITLED_CELL_STACKED = 'Untitled Stacked Gracph'
@@ -110,3 +111,4 @@ export const TYPE_QUERY_CONFIG = 'queryConfig'
 export const TYPE_SHIFTED = 'shifted queryConfig'
 export const TYPE_IFQL = 'ifql'
 export const DASHBOARD_NAME_MAX_LENGTH = 50
+export const TEMPLATE_RANGE = {upper: null, lower: TEMP_VAR_DASHBOARD_TIME}
